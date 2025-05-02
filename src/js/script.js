@@ -42,7 +42,7 @@ const deleteLast = () => {
 
 const calculateResult = () => {
   try {
-    currentInput = parseFloat(eval(currentInput.replace(/%/g, "/100"))).toFixed(2).toString();
+    currentInput = eval(currentInput.replace(/%/g, "/100")).toString();
     updateDisplay();
   } catch {
     currentInput = "Error";
