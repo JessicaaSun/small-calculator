@@ -8,7 +8,15 @@ const updateDisplay = () => {
 };
 
 const appendNumber = (num) => {
-  currentInput += num;
+  const parts = currentInput.split(/[\+\-\*\/%]/);
+  const lastPart = parts[parts.length - 1];
+
+  if (lastPart === "0" && num === "0") return;
+  if (lastPart === "0" && num !== "." && num !== "0") {
+    currentInput = currentInput.slice(0, -1) + num;
+  } else {
+    currentInput += num;
+  }
   updateDisplay();
 };
 
