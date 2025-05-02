@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="./src/styles/output.css" />
+  </head>
+  <body class="bg-gray-900 min-h-screen flex justify-center items-center">
+    <main class="w-[340px] bg-black rounded-3xl p-4 text-white">
+      <div
+        id="display"
+        class="bg-gray-800 overflow-x-auto h-20 rounded-xl font-mono p-4 text-4xl text-right"
+      >
+        0
+      </div>
+
+      <div class="grid grid-cols-4 text-2xl gap-3 mt-5 font-semibold">
+        <button
+          onclick="clearDisplay()"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          AC
+        </button>
+        <button
+          onclick="deleteLast()"
+          class="bg-gray-700 text-3xl w-[68px] h-[68px] flex justify-center items-center rounded-full py-[18px]"
+          type="button"
+        >
+          ⌫
+        </button>
+        <button
+          onclick="appendOperator('%')"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          %
+        </button>
+        <button
+          onclick="appendOperator('/')"
+          class="bg-orange-500 text-3xl w-[68px] h-[68px] flex justify-center items-center rounded-full py-[18px]"
+          type="button"
+        >
+          ÷
+        </button>
+
+        <button
+          onclick="appendNumber('7')"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          7
+        </button>
+        <button
+          onclick="appendNumber('8')"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          8
+        </button>
+        <button
+          onclick="appendNumber('9')"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          9
+        </button>
+        <button
+          onclick="appendOperator('*')"
+          class="bg-orange-500 rounded-full py-[18px]"
+          type="button"
+        >
+          ×
+        </button>
+
+        <button
+          onclick="appendNumber('4')"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          4
+        </button>
+        <button
+          onclick="appendNumber('5')"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          5
+        </button>
+        <button
+          onclick="appendNumber('6')"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          6
+        </button>
+        <button
+          onclick="appendOperator('-')"
+          class="bg-orange-500 rounded-full py-[18px]"
+          type="button"
+        >
+          –
+        </button>
+
+        <button
+          onclick="appendNumber('1')"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          1
+        </button>
+        <button
+          onclick="appendNumber('2')"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          2
+        </button>
+        <button
+          onclick="appendNumber('3')"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          3
+        </button>
+        <button
+          onclick="appendOperator('+')"
+          class="bg-orange-500 rounded-full py-[18px]"
+          type="button"
+        >
+          +
+        </button>
+
+        <button
+          onclick="appendNumber('0')"
+          class="bg-gray-700 col-span-2 rounded-full py-[18px]"
+          type="button"
+        >
+          0
+        </button>
+        <button
+          onclick="appendDot()"
+          class="bg-gray-700 rounded-full py-[18px]"
+          type="button"
+        >
+          .
+        </button>
+
+        <button onclick="calculateResult()" class="bg-green-500 rounded-full py-[18px]" type="button">
+          =
+        </button>
+      </div>
+    </main>
+
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>
